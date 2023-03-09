@@ -19,7 +19,7 @@
     <nav class="logo">
     <a href="#"><img src="/images/logo.svg" alt=""></a>
    </nav>
-  
+    <div class="hero-mobile"></div>
     <div class="main-container">
     <h1><div class="h1-hl">We're</div>coming soon</h1> 
 
@@ -27,14 +27,12 @@
     Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
    <form class="email-login" action="#">
-    <label for="Email"></label>
-    <input name='Email' id="Email" value="" type="email" placeholder="Email Address">
+    <div class="input-space">
+      <input id="Email" value="" type="email">
+      <button type="submit" id="btn-submit" onclick="checkError()"><img src="images/icon-arrow.svg" alt=""></button> 
+    </div>
     <p id="error-text"></p>
-
-    <button type="submit" id="btn-submit" onclick="checkError()"><img src="images/icon-arrow.svg" alt=""></button> 
    </form>
-
-   
    </div>
   
 

@@ -14,6 +14,8 @@
 
 body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -35,6 +37,15 @@ body {
     background-image: url(./images/hero-desktop.jpg);
     background-position: right;
     background-repeat: no-repeat;
+}
+
+.hero-mobile {
+    height: 30vh;
+    width: 100vw;
+    background-image: url(./images/hero-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
 }
 
 .h1-hl {
@@ -60,6 +71,11 @@ p {
     color: var(--Desaturated-Red);
 }
 
+.input-space {
+    width: 30rem;
+    position: relative;
+}
+
 input {
     margin-top: 2rem;
 
@@ -75,13 +91,6 @@ input {
     background-position: 21rem;
 }
 
-#error-text {
-    margin-top: 0;
-    padding-left: 2.5rem;
-    color: var(--Soft-Red);
-    font-size: 1rem;
-}
-
 #btn-submit {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: none;
@@ -91,8 +100,8 @@ input {
     width: 6rem;
     height: 4rem;
     position: absolute;
-    left: 32rem;
-    bottom: 10.1rem;
+    left: 25rem;
+    bottom: 0;
     transition: 0.3s;
 }
 
@@ -101,11 +110,16 @@ input {
     box-shadow: -25px 24px 54px -23px rgba(172, 3, 3, 0.77);
 }
 
+#error-text {
+    margin-top: 0;
+    padding-left: 2.5rem;
+    color: var(--Soft-Red);
+    font-size: 1rem;
+}
 
 footer {
     padding-left: 8rem;
-    position: fixed;
-    bottom: 4rem;
+    padding-top: 4rem;
     color: var(--Desaturated-Red);
     font-size: 0.8rem;
     
@@ -114,4 +128,70 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--Soft-Red);
+}
+
+@media (max-width: 375px) {
+    .main-container {
+        padding-left: 2rem;
+        
+    }
+
+    .logo {
+        padding: 2rem 1rem 2rem;
+    }
+
+    .hero-desktop {
+        background-image: none;
+    }
+
+    .hero-mobile {
+        display: block;
+    }
+    
+    .h1-hl {
+        font-size: 3rem;
+    }
+    
+    h1 {
+        margin-top: 3rem;
+        font-size: 3rem;
+        letter-spacing: 0.7rem;
+        line-height: 3rem;
+        width: 20rem;
+        text-align: center;
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        width: 20rem;
+        text-align: center;
+    }
+
+    .input-space {
+        width: 20rem;
+        position: relative;
+    }
+    
+    input {
+        height: 4rem;
+        width: 20rem;
+        background-position: 12rem;
+    }
+    
+    #btn-submit {
+        left: 14rem;
+    }
+
+    #error-text {
+        padding-right: 3rem;
+        font-size: 0.7rem;
+    }
+    
+    footer {
+        padding-left: 3rem;
+        padding-top: 4rem;
+        font-size: 0.6rem;
+    }
 }
